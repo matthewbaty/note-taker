@@ -1,6 +1,6 @@
 // packages
 const express = require('express');
-// const apiRoutes =require('./routes/api');
+const apiRoutes =require('./routes/api');
 const htmlRoutes = require('./routes/html');
 
 // port
@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-// app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 // listen to the server
