@@ -1,7 +1,7 @@
 // packages
 const express = require('express');
 // const apiRoutes =require('./routes/api');
-// const htmlRoutes = require('./routes/html');
+const htmlRoutes = require('./routes/html');
 
 // port
 const PORT = process.env.PORT || 3001;
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // app.use('/api', apiRoutes);
-// app.use('/', htmlRoutes);
+app.use('/', htmlRoutes);
 
 // listen to the server
 app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT} 🚀`));
