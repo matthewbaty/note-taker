@@ -7,7 +7,7 @@ const fs = require('fs');
 router.get('/notes', async (req, res) => {
     const dbJson = await JSON.parse(fs.readFileSync('db/db.json', 'utf8'));
     res.json(dbJson);
-})
+});
 
 // post route for new notes
 router.post('/notes', (req, res) => {
