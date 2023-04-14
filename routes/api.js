@@ -13,7 +13,7 @@ router.get('/notes', async (req, res) => {
 router.post('/notes', (req, res) => {
     const dbJson = JSON.parse(fs.readFileSync('db/db.json', 'utf8'));
 
-    // new note
+    // new note var
     const newNote = {
         id: uuidv4(),
         title: req.body.title,
