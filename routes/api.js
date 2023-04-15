@@ -19,7 +19,7 @@ router.post('/notes', (req, res) => {
         title: req.body.title,
         text: req.body.text
     };
-    
+
     dbJson.push(newNote);
     fs.writeFileSync('db/db.json', JSON.stringify(dbJson));
     res.json(dbJson);

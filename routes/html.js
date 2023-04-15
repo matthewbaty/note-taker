@@ -1,5 +1,5 @@
-const path = require('path');
 const router = require('express').Router();
+const path = require('path');
 
 // get route homepage
 router.get('/', (req, res) => {
